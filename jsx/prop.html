@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <!-- 
+        - React Element
+            - Sử dụng props giống như thuộc tính của thẻ HTML
+            - 2 props class, for => className, htmlFor
+            - Phải tuân theo quy ước có sẵn 
+        - React Component
+            - Sử dụng props giống như đối số cho Component
+            - Tự do đặt tên props
+                - Đặt them camelCase
+                - Có thể bao gồm cả dấu gạch ngang
+        - Chú ý
+            - Prop "key" là prop đặc biệt
+            - Props có bản là đối số của component
+                => Props có thể là bất kỳ kiểu dữ liệu nào
+            - Sử dụng destructuring để lấy giá trị từ props
+    -->
+    <div id="root"></div>
+    <script type="text/babel">
+
+        // PostItem.js
+
+        function PostItem() {
+            return (
+                <div className="post-item">
+                    <label for="email">Email</label>
+                    <input id="email" />
+                    <h2>Post Title</h2>
+                    <p>Post content goes here...</p>
+                    <img src="https://files.fullstack.edu.vn/f8-prod/courses/15/62f13d2424a47.png" alt="C#(.NET)- tuong tac voi file excel"/>
+                </div>
+            )
+        }
+
+        // App.js
+        function App() {
+            return (
+                <div id="wrapper">
+                    <PostItem />
+                    <PostItem />
+                    <PostItem />
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

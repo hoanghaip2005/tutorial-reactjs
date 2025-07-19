@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    scr
+    <!-- 
+        1. document.createElement('h1') tạo ra một phần tử h1 mới
+        2. document.body.appendChild(h1) thêm phần tử h1 vào cuối body
+        3. console.dir(h1) in ra đối tượng DOM của phần tử h1
+        4. innerText, id, className, style
+    -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <div id="root"></div>
+    <script>
+        const root = document.getElementById('root');
+        const h1 = document.createElement('h1'); 
+        h1.innerText = 'Hello guy';
+        h1.id = 'heading';
+        h1.className = 'heading-class';
+        h1.style = 'color: red'; 
+        Object.assign(h1.style, {
+            color: 'red',
+            fontSize: '20px'
+        }); // Sử dụng Object.assign để thêm nhiều thuộc tính style
+
+        console.log(h1); 
+
+        document.body.appendChild(h1); // Thêm phần tử h1 vào cuối body
+        root.appendChild(h1); // Thêm phần tử h1 vào div có id root
+     </script>
+</body>
+</html>

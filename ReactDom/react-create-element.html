@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <!-- 
+    1. React.createElement() -> React element
+    5. Tạo: <h1 title="Hello" class="heading">Hello guy</h1>
+    6. Tạo: 
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>    
+    7. Tạo:
+
+    -->
+
+    <script>
+        // const h1Dom = document.createElement('h1');
+        // h1Dom.title = 'Hello';
+        // h1Dom.className = 'heading';
+        // h1Dom.innerText = 'Hello guy1';
+
+        // document.body.appendChild(h1Dom); // Thêm phần tử h1 vào cuối body
+
+        // // React -> React - Dom
+        // // React.createElement(type, props, ...children, n)
+
+        // const h1React = React.createElement('h1', {
+        //     title: 'Hello',
+        //     className: 'heading'
+        // }, 'Hello guys2');
+
+        // console.log(h1Dom);
+        // console.log(h1React); // In ra React element
+
+        // const ulDom = document.createElement('ul');
+        // ulDom.id = 'ul-id';
+        // ulDom.style.color = 'red';
+
+        // const liDom1 = document.createElement('li');
+        // liDom1.innerText = 'JavaScript';
+        // liDom1.id = 'li-id-1';
+
+        // const liDom2 = document.createElement('li');
+        // liDom2.innerText = 'ReactJS';
+
+        // ulDom.appendChild(liDom1);
+        // ulDom.appendChild(liDom2); // Thêm các phần tử li vào ul
+
+        // document.body.appendChild(ulDom); // Thêm phần tử ul vào cuối body
+
+        // console.log(ulDom); // In ra phần tử ul
+
+        // const ulReact = React.createElement('ul', 
+        //     { 
+        //         id: 'ul-id',
+        //         style: 'color: red; font-size: 20px;'
+        //     }, 
+        //     React.createElement('li', {id:'li-1'}, 'JavaScript'),
+        //     React.createElement('li', {id:'li-2'}, 'ReactJS')   
+        // )
+
+        // console.log(ulReact); // In ra React element
+
+        const root = document.createElement('div');
+        root.className = 'post-Item';
+
+        const h2Dom = document.createElement('h2');
+        h2Dom.innerText = 'Hoc ReactJS';
+        h2Dom.title = 'Hoc react tai f8';
+
+        const pDom = document.createElement('p');
+        pDom.innerText = 'Hoc ReactJS tai F8';
+
+        root.appendChild(h2Dom);
+        root.appendChild(pDom);
+
+        document.body.appendChild(root); // Thêm phần tử root vào cuối body
+        console.log(root); // In ra phần tử root
+
+        const rootReact = React.createElement(
+            'div', 
+            {className: 'post-item'},
+            React.createElement('h2', {title: 'Hoc react tai f8'}, 'Hoc ReactJS'),
+            React.createElement('p', null, 'Hoc ReactJS tai F8')
+        )
+
+        
+</script>
+
+</body>
+</html>

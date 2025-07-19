@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <!-- 
+    1. React-Dom/ React-native
+    2. Render UI -->
+    
+    <div id="root"></div>
+
+    <script>        
+        const postItem = React.createElement(
+            'div', 
+            {
+                className: 'post-item'
+            },
+            React.createElement(
+                'h2', 
+                {
+                    title: 'Hoc react tai f8'
+                }, 
+                'Hoc ReactJS'
+            ),
+            React.createElement('p', {}, 'Hoc ReactJS tai F8')
+        )
+        // get root element
+        // const root = document.getElementById('root');
+
+        // react-dom -> render UI
+
+        // ReactDOM.render(postItem, root);
+
+        // React@18
+        const container = document.getElementById('root')
+        const root = ReactDOM.createRoot(container);
+        root.render(postItem);
+    </script>
+</body>
+</html>
